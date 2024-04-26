@@ -10,6 +10,8 @@ import Home from './component/Home/Home.jsx';
 import Login from './component/Login/Login.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import TouristsSpotInput from './component/TouristsSpot/TouristsSpotInput.jsx';
+import ViewDetails from './component/View Details/ViewDetails.jsx';
+import Update from './component/Update/Update.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
         path: "/Tourist",
         element: <TouristsSpotInput />
       },
+      {
+        path: "viewDetails",
+        element: <ViewDetails></ViewDetails>
+      },
+      {
+        path: "/update",
+        element: <Update></Update>
+      },
     ],
     get children() {
       return this._children;
@@ -42,7 +52,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HelmetProvider></HelmetProvider>
+    <HelmetProvider>
     <RouterProvider router={router} />
+    </HelmetProvider>
+ 
   </React.StrictMode>,
 )

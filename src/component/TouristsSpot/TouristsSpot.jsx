@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 const TouristsSpot = () => {
     return (
         <div>
+            {/*  a. image
+ b. tourists_spot_name
+ c. average_cost
+ d. totaVisitorsPerYear
+ e. travel_time
+ f. seasonality */}
             <div className="max-w-xs rounded-md shadow-2xl shadow-slate-400 dark:bg-gray-50 dark:text-gray-800 " data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">
@@ -11,16 +17,18 @@ const TouristsSpot = () => {
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
                         <h2 className="text-3xl font-semibold tracking-wide">name</h2>
-                        <p className="dark:text-gray-800">avg</p>
+                        <p className="dark:text-gray-800">average_cost</p>
+                        <p>totaVisitorsPerYear </p>
 
                         <div className="flex gap-5">
-                            <p>location</p>
-                            <p>p</p>
+                            <p>travel_time</p>
+                            <p>seasonality </p>
+                            
                         </div>
                     </div>
-                    <Link >
+                    <Link to='/viewDetails' >
 
-                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Property</button>
+                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button>
                     </Link>
 
                 </div>
