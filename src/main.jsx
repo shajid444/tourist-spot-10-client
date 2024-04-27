@@ -12,12 +12,14 @@ import { HelmetProvider } from 'react-helmet-async';
 import TouristsSpotInput from './component/TouristsSpot/TouristsSpotInput.jsx';
 import ViewDetails from './component/View Details/ViewDetails.jsx';
 import Update from './component/Update/Update.jsx';
+import Error from './component/Error/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<Error></Error>,
 
     _children: [
       {
