@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Banner> </Banner>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
             {
                 places.map(place=> <TouristsSpot key={place._id} place={place}></TouristsSpot> )
             }

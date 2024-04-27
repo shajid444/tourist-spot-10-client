@@ -14,6 +14,8 @@ import ViewDetails from './component/View Details/ViewDetails.jsx';
 import Update from './component/Update/Update.jsx';
 import Error from './component/Error/Error.jsx';
 import TouristsSpot from './component/TouristsSpot/TouristsSpot.jsx';
+import MyList from './component/MyList/MyList.jsx';
+import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,6 +46,16 @@ const router = createBrowserRouter([
       {
         path: "/update",
         element: <Update></Update>
+      },
+      {
+        path: "/myList",
+        element: <MyList></MyList>,
+        loader: ()=> fetch('http://localhost:5000/place')
+      },
+      {
+        path: "/updatepage",
+        element: <UpdatePage></UpdatePage>
+     
       },
     ],
     get children() {
