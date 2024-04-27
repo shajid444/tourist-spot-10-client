@@ -1,5 +1,5 @@
 
-
+import Swal from 'sweetalert2'
 const TouristsSpotInput = () => {
 
     const addTouristsSpot = event =>{
@@ -20,7 +20,26 @@ const TouristsSpotInput = () => {
 
         const tspot = {photo, tourists_spot_name, country_name, location, totalVisitor, shortDescription, avgCost, seasonality, travelTime, username, email};
         console.log(tspot);
-       
+
+       fetch('http://localhost:5000/place',{
+        method : 'POST',
+        headers:{
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(tspot)
+       }).then(res => res.json())
+       .then(data => {
+        console.log(data);
+        if(data.insertedId){
+            Swal.fire({
+                title: 'Success!',
+                text: 'Tourist place added successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+
+        }
+       })
 
 
     }

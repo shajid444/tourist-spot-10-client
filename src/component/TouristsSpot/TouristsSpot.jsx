@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
 
-const TouristsSpot = () => {
+const TouristsSpot = ({place}) => {
+    // const places = useLoaderData();
     return (
         <div>
             {/*  a. image
@@ -10,6 +11,7 @@ const TouristsSpot = () => {
  d. totaVisitorsPerYear
  e. travel_time
  f. seasonality */}
+ {/* <h className='text-3xl'>places : </h> */}
             <div className="max-w-xs rounded-md shadow-2xl shadow-slate-400 dark:bg-gray-50 dark:text-gray-800 " data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">

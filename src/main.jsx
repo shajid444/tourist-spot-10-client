@@ -13,6 +13,7 @@ import TouristsSpotInput from './component/TouristsSpot/TouristsSpotInput.jsx';
 import ViewDetails from './component/View Details/ViewDetails.jsx';
 import Update from './component/Update/Update.jsx';
 import Error from './component/Error/Error.jsx';
+import TouristsSpot from './component/TouristsSpot/TouristsSpot.jsx';
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
     _children: [
       {
         path: "/home",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/place')
       },
       {
         path: "/login",
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
         path: "/Tourist",
         element: <TouristsSpotInput />
       },
+     
       {
         path: "viewDetails",
         element: <ViewDetails></ViewDetails>

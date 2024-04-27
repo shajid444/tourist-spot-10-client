@@ -9,6 +9,7 @@ const Navbar = () => {
 
         <li><NavLink to='/update' >Update Profile </NavLink></li>
         <li><NavLink to='/Tourist'>User Profile </NavLink></li>
+        <li><NavLink >Added place </NavLink></li>
 
     </>
     // const { logOut, user } = useAuth();
