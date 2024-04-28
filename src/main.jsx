@@ -16,6 +16,8 @@ import Error from './component/Error/Error.jsx';
 import TouristsSpot from './component/TouristsSpot/TouristsSpot.jsx';
 import MyList from './component/MyList/MyList.jsx';
 import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
+import Register from './component/Register/Register.jsx';
+import FirebaseProvider from './component/FirebaseProvider/FirebaseProvider.jsx';
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
       {
         path: "/Tourist",
@@ -72,7 +78,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router} />
+     <FirebaseProvider>
+     <RouterProvider router={router} />
+     </FirebaseProvider>
+
     </HelmetProvider>
 
   </React.StrictMode>,
