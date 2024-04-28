@@ -18,6 +18,7 @@ import MyList from './component/MyList/MyList.jsx';
 import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
 import Register from './component/Register/Register.jsx';
 import FirebaseProvider from './component/FirebaseProvider/FirebaseProvider.jsx';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -47,7 +48,9 @@ const router = createBrowserRouter([
 
       {
         path: "viewDetails",
-        element: <ViewDetails></ViewDetails>
+        element: <PrivateRoute>
+          <ViewDetails></ViewDetails>
+        </PrivateRoute>
       },
       {
         path: "/update",

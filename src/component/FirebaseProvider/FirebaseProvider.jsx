@@ -102,8 +102,9 @@ const FirebaseProvider = ({ children }) => {
         githubLogin,
         logOut,
         user,
+        updateUserProfile,
         loading,
-        updateUserProfile
+        
     }
 
 

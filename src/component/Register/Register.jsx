@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../hook/useAuth";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 
 
 
@@ -16,15 +16,29 @@ const Register = () => {
 
         formState: { errors },
     } = useForm();
+
+    const navigate = useNavigate();
+    // const location = useLocation();
+    // console.log(location);
+
+    const form = '/home';
+
     const onSubmit = data => {
         const { email, password, image, username } = data;
 
         // create user and update profile
         createUser(email, password)
-            .then(() => {
-                updateUserProfile(username, image)
+        .then(()=>{
+            updateUserProfile(username, image)
+            .then(()=>{
+                
+                    navigate(form);
+                    // console.log(result.user);
+                
 
             })
+          
+        });
 
     }
 
