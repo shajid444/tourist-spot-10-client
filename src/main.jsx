@@ -22,13 +22,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    errorElement:<Error></Error>,
+    errorElement: <Error></Error>,
 
     _children: [
       {
         path: "/home",
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/place')
+        loader: () => fetch('http://localhost:5000/place')
       },
       {
         path: "/login",
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         path: "/Tourist",
         element: <TouristsSpotInput />
       },
-     
+
       {
         path: "viewDetails",
         element: <ViewDetails></ViewDetails>
@@ -50,12 +50,14 @@ const router = createBrowserRouter([
       {
         path: "/myList",
         element: <MyList></MyList>,
-        loader: ()=> fetch('http://localhost:5000/place')
+        loader: () => fetch('http://localhost:5000/place')
       },
       {
-        path: "/updatepage",
-        element: <UpdatePage></UpdatePage>
-     
+        path: '/updatepage/:id',
+        element: <UpdatePage></UpdatePage>,
+        loader : ({params})=> fetch(`http://localhost:5000/place/${params.id}`)
+
+        // loader: () => fetch('http://localhost:5000/place')
       },
     ],
     get children() {
@@ -70,8 +72,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </HelmetProvider>
- 
+
   </React.StrictMode>,
 )
