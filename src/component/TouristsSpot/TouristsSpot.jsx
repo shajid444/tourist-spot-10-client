@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const TouristsSpot = ({place}) => {
-    const {photo, tourists_spot_name, country_name, location, totalVisitor, shortDescription, avgCost, seasonality, travelTime, username, email} = place;
+    const {_id, photo, tourists_spot_name, country_name, location, totalVisitor, shortDescription, avgCost, seasonality, travelTime, username, email} = place;
     // const places = useLoaderData();
     return (
         <div>
@@ -29,7 +29,7 @@ const TouristsSpot = ({place}) => {
                             
                         </div>
                     </div>
-                    <Link to='/viewDetails' >
+                    <Link to={`/viewDetails/${_id}`}>
 
                         <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button>
                     </Link>
