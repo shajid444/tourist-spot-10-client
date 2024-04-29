@@ -1,15 +1,23 @@
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../hook/useAuth";
 
 
 const MyList = () => {
+    const {user} = useAuth();
     const loadedList = useLoaderData();
-    const[list, setList] = useState(loadedList);
+    const load = loadedList.filter(load =>load.email== user.email);
+    const[list, setList] = useState(load);
+   
+    // console.log(user.email);
+    // console.log(list[0].email);
+    // console.log(load);
 
     const handleDelete = _id => {
+      
 
-        console.log(_id);
+        // console.log(_id);
 
         Swal.fire({
             title: "Are you sure?",
