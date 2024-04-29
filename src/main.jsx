@@ -20,6 +20,7 @@ import Register from './component/Register/Register.jsx';
 import FirebaseProvider from './component/FirebaseProvider/FirebaseProvider.jsx';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute.jsx';
 import AllTouristsSpot from './component/AllTouristSpot/AllTouristsSpot.jsx';
+import Users from './component/Users/Users.jsx';
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/place')
+      },
+      {
+        path: "/users",
+        element: <Users></Users>,
+        loader: () => fetch('http://localhost:5000/user')
       },
       {
         path: "/login",

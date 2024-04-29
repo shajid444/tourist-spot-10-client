@@ -2,10 +2,10 @@
 // context
 
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import { toast } from "react-toastify";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
 
 export const AuthContext = createContext(null)
 // social auth provider
@@ -51,20 +51,20 @@ const FirebaseProvider = ({ children }) => {
 
     // google login
     const googleLogin = () => {
-        toast("SUCCESSFULLY LOGIN!");
+        // toast("SUCCESSFULLY LOGIN!");
         setLoading(true);
 
 
-        signInWithPopup(auth, googleProvider)
+       return signInWithPopup(auth, googleProvider)
     }
 
     // github 
     const githubLogin = () => {
-        toast("SUCCESSFULLY LOGIN!");
+        // toast("SUCCESSFULLY LOGIN!");
         setLoading(true);
 
 
-        signInWithPopup(auth, githubProvider)
+        return signInWithPopup(auth, githubProvider)
     }
 
     // logout

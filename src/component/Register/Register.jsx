@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../hook/useAuth";
 import { Helmet } from "react-helmet-async";
 import { Link,  useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 
@@ -25,15 +26,31 @@ const Register = () => {
 
     const onSubmit = data => {
         const { email, password, image, username } = data;
+        // console.log(email,username);
+
+        fetch('http://localhost:5000/user', {
+            method :'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+            if(data.insertedId){
+                toast('user info added into database')
+            }
+        })
 
         // create user and update profile
         createUser(email, password)
         .then(()=>{
             updateUserProfile(username, image)
-            .then(()=>{
+            .then((result)=>{
                 
                     navigate(form);
-                    // console.log(result.user);
+                    // console.log(result.username);
                 
 
             })

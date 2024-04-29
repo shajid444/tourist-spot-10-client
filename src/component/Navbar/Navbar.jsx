@@ -13,6 +13,7 @@ const Navbar = () => {
 
         <li><NavLink to='/update' >Profile </NavLink></li>
         <li><NavLink  >Update Page</NavLink></li>
+        <li><NavLink to='/users' >Users</NavLink></li>
         
        
        
@@ -39,7 +40,7 @@ const Navbar = () => {
             </div>
             <a className="btn btn-ghost text-xl text-primary">Explore the Wonders of the Region</a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex ml-20">
             <ul className="menu menu-horizontal px-1">
                 {navLinks}
             </ul>
