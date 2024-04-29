@@ -19,6 +19,7 @@ import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
 import Register from './component/Register/Register.jsx';
 import FirebaseProvider from './component/FirebaseProvider/FirebaseProvider.jsx';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute.jsx';
+import AllTouristsSpot from './component/AllTouristSpot/AllTouristsSpot.jsx';
 
 
 const router = createBrowserRouter([
@@ -43,7 +44,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/Tourist",
-        element: <TouristsSpotInput />
+        element: <PrivateRoute>
+          <TouristsSpotInput />
+        </PrivateRoute>
+      },
+      {
+        path: "/allTouristSpot",
+        element: <AllTouristsSpot></AllTouristsSpot>,
+        loader: ()=> fetch('http://localhost:5000/place')
       },
 
       {
@@ -52,13 +60,16 @@ const router = createBrowserRouter([
           <ViewDetails></ViewDetails>
         </PrivateRoute>
       },
+      
       {
         path: "/update",
         element: <Update></Update>
       },
       {
         path: "/myList",
-        element: <MyList></MyList>,
+        element: <PrivateRoute>
+          <MyList></MyList>
+        </PrivateRoute>,
         loader: () => fetch('http://localhost:5000/place')
       },
       {

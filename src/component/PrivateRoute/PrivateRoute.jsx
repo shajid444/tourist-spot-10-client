@@ -17,8 +17,8 @@ const PrivateRoute = ({children}) => {
     }
     return (
         <div>
-            {/* {children} */}
-            <h1>this is privateroute</h1>
+            {children}
+           
         </div>
     );
 };
