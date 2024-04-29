@@ -10,7 +10,8 @@
  diverse region.
 
 
--Features
+-Features :
+
 Discover Top Destinations: Explore a curated collection of must-visit tourist spots in Southeast Asia, ranging from iconic landmarks to hidden gems waiting to be uncovered.
 Secure and Seamless Access: Easily log in with your email and password, or conveniently use social login options like Google, GitHub, Facebook, or Twitter for quick access to exclusive features.
 Personalized Travel Experience: Tailor your journey by creating a personalized list of your favorite spots and connecting with fellow travelers to share tips and experiences.
@@ -20,7 +21,8 @@ Interactive Maps: Navigate through Southeast Asia's diverse landscapes with inte
 Helpful Resources: Access a wealth of travel resources, including travel tips, local insights, and recommended itineraries, to make the most of your Southeast Asia adventure.
 
 
--Technologies Used
+-Technologies Used :
+
 React.js: Powering the frontend
 Node.js: Handling backend tasks
 MongoDB: Storing and managing data
@@ -34,6 +36,7 @@ Md Shajid Hasan
 
 
 -Feedback and Contributions:
+
 We value your feedback and contributions! Whether you have ideas for improvement or want to contribute your skills, feel free to reach out. Simply open an issue or pull request on GitHub - we'd love to hear from you.
 
 
