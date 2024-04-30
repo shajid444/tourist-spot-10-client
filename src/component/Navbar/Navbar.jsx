@@ -4,6 +4,8 @@ import useAuth from "../../hook/useAuth";
 
 
 const Navbar = () => {
+    const { logOut, user } = useAuth();
+    // console.log(user);
 
     const navLinks = <>
         <li><NavLink to="/home">Home</NavLink></li>
@@ -24,7 +26,7 @@ const Navbar = () => {
 
     </>
     
-    const { logOut, user } = useAuth();
+   
     
 
     return (
@@ -50,12 +52,13 @@ const Navbar = () => {
                 user?  <div className="dropdown dropdown-end" >
                <label  tabIndex={0} className="btn  btn-ghost btn-circle avatar" >
                <div className=" w-10 rounded-full ">
-                    <img  alt="Tailwind CSS Navbar component" src={user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" } />
+                    <img  alt="Tailwind CSS Navbar component" src={user?.
+photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" } />
                 </div>
                </label>
                <ul tabIndex={0} className="menu menu-sm dropdown-content  z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
-                    <button className="btn btn-sm btn-ghost">{user?.displayName || 'name not found'}</button>
+                    <button className="btn btn-sm btn-ghost">{user.displayName || 'name not found'}</button>
                 </li>
 
                </ul>
