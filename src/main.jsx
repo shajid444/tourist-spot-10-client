@@ -21,6 +21,8 @@ import FirebaseProvider from './component/FirebaseProvider/FirebaseProvider.jsx'
 import PrivateRoute from './component/PrivateRoute/PrivateRoute.jsx';
 import AllTouristsSpot from './component/AllTouristSpot/AllTouristsSpot.jsx';
 import Users from './component/Users/Users.jsx';
+import CountryInput from './component/Country/CountryInput.jsx';
+import Country from './component/Country/Country.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,16 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <TouristsSpotInput />
         </PrivateRoute>
+      },
+      {
+        path: "/cinput",
+        element: <CountryInput></CountryInput>
+        
+      },
+      {
+        path: "/country",
+        element: <Country></Country>,
+        loader: () => fetch('http://localhost:5000/country')
       },
       {
         path: "/allTouristSpot",

@@ -4,9 +4,11 @@ import Banner from "../Banner/Banner";
 import TouristsSpot from "../TouristsSpot/TouristsSpot";
 // import TouristsSpot from "../TouristsSpot/TouristsSpot";
 // import { Tooltip } from 'react-tooltip'
-
+// import Country from '../Country/Country';
 // import React from 'react'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Country from '../Country/Country';
+
 
 
 const Home = () => {
@@ -30,6 +32,10 @@ const Home = () => {
                 {
                     places.map(place => <TouristsSpot key={place._id} place={place}></TouristsSpot>).slice(0, 6)
                 }
+            </div>
+
+            <div>
+                <Country></Country>
             </div>
 
 
