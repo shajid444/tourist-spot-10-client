@@ -35,12 +35,12 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/place')
+        loader: () => fetch('https://assignment-10-server-livid.vercel.app/place')
       },
       {
         path: "/users",
         element: <Users></Users>,
-        loader: () => fetch('http://localhost:5000/user')
+        loader: () => fetch('https://assignment-10-server-livid.vercel.app/user')
       },
       {
         path: "/login",
@@ -61,15 +61,11 @@ const router = createBrowserRouter([
         element: <CountryInput></CountryInput>
         
       },
-      {
-        path: "/country",
-        element: <Country></Country>,
-        loader: () => fetch('http://localhost:5000/country')
-      },
+     
       {
         path: "/allTouristSpot",
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: ()=> fetch('http://localhost:5000/place')
+        loader: ()=> fetch('https://assignment-10-server-livid.vercel.app/place')
       },
 
       {
@@ -77,7 +73,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <ViewDetails></ViewDetails>
         </PrivateRoute>,
-        loader : ({params})=> fetch(`http://localhost:5000/place/${params.id}`)
+        loader : ({params})=> fetch(`https://assignment-10-server-livid.vercel.app/place/${params.id}`)
       },
       
       {
@@ -89,14 +85,14 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyList></MyList>
         </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/place')
+        loader: () => fetch('https://assignment-10-server-livid.vercel.app/place')
       },
       {
         path: '/updatepage/:id',
         element: <UpdatePage></UpdatePage>,
-        loader : ({params})=> fetch(`http://localhost:5000/place/${params.id}`)
+        loader : ({params})=> fetch(`https://assignment-10-server-livid.vercel.app/place/${params.id}`)
 
-        // loader: () => fetch('http://localhost:5000/place')
+        // loader: () => fetch('https://assignment-10-server-livid.vercel.app/place')
       },
     ],
     get children() {

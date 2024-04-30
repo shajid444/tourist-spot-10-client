@@ -21,7 +21,7 @@ const TouristsSpotInput = () => {
         const tspot = {photo, tourists_spot_name, country_name, location, totalVisitor, shortDescription, avgCost, seasonality, travelTime, username, email};
         console.log(tspot);
 
-       fetch('http://localhost:5000/place',{
+       fetch('https://assignment-10-server-livid.vercel.app/place',{
         method : 'POST',
         headers:{
             'content-type': 'application/json'

@@ -26,7 +26,7 @@ const {_id, photo, tourists_spot_name, country_name, location, totalVisitor, sho
        
         console.log(updtaedPlace);
 
-        fetch(`http://localhost:5000/place/${_id}`, {
+        fetch(`https://assignment-10-server-livid.vercel.app/place/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

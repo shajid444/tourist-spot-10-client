@@ -28,7 +28,7 @@ const Register = () => {
         const { email, password, image, username } = data;
         // console.log(email,username);
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://assignment-10-server-livid.vercel.app/user', {
             method :'POST',
             headers:{
                 'content-type':'application/json'

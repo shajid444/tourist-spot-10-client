@@ -31,7 +31,7 @@ const MyList = () => {
             if (result.isConfirmed) {
 
                 console.log('delete confirmed');
-                fetch(`http://localhost:5000/place/${_id}`, {
+                fetch(`https://assignment-10-server-livid.vercel.app/place/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

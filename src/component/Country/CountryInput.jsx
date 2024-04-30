@@ -15,7 +15,7 @@ const CountryInput = () => {
         const tspot = {photo,  country_name,shortDescription};
         console.log(tspot);
 
-       fetch('http://localhost:5000/country',{
+       fetch('https://assignment-10-server-livid.vercel.app/country',{
         method : 'POST',
         headers:{
             'content-type': 'application/json'
