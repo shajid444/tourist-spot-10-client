@@ -30,6 +30,10 @@ Firebase: Ensuring secure authentication
 
 SweetAlert2: Providing friendly alerts and notifications
 
+-Package used :
+1.React-simple-Typewriter
+2.React-tooltip
+
 -Contributors:
 
 Md Shajid Hasan
