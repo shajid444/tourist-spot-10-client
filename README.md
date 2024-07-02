@@ -44,6 +44,34 @@ Md Shajid Hasan
 We value your feedback and contributions! Whether you have ideas for improvement or want to contribute your skills, feel free to reach out. Simply open an issue or pull request on GitHub - we'd love to hear from you.
 
 
+## For running the project
+
+## Clone the repository
+git clone https://github.com/yourusername/medimart.git
+cd medimart
+
+## Set up the backend
+cd server
+npm install
+
+## Create .env file in the server directory and add environment variables
+
+## Set up the frontend
+cd ../client
+npm install
+
+## Start the backend server
+cd ../server
+npm run dev
+
+## Start the frontend development server
+cd ../client
+npm start
+
+## Access the application
+## Open your browser and navigate to http://localhost:-----
+
+
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
